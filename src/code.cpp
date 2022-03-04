@@ -3,7 +3,7 @@
 */
 
 #include <bits/stdc++.h>
-#include "assignment/code.hpp"
+//#include "assignment/code.hpp"
 using namespace std;
  
 #define fast_io         {ios::sync_with_stdio(0); cin.tie(0);}
@@ -32,11 +32,12 @@ namespace assignment {
 
     // Task 1
     int squared_diff(int left, int right) {
-        return abs(left - right) * abs(left - right);
+        return (left - right) * (left - right);
     }
 
     // Task 2
     bool check_bit(int mask, int bit_pos) {
+        if(mask < 0 || bit_pos < 0) return 0;
         return ((mask >> bit_pos) & 1);
     }
 
@@ -47,6 +48,7 @@ namespace assignment {
 
     // Task 4
     void swap_args(int *left, int *right) {
+        if(left == nullptr || right == nullptr) return;
         int mem = *left;
         *left = *right;
         *right = mem;
@@ -79,7 +81,7 @@ namespace assignment {
         if(length <= 0) return nullptr;
         int *res = new int[length];
         fill(res, res + length, init_value);
-        return res;;
+        return res;
     }
 
     // Task 8
@@ -102,7 +104,6 @@ namespace assignment {
     }
 
 }  // namespace assignment
-
 
 /*
  
