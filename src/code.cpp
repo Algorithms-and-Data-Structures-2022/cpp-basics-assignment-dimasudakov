@@ -57,7 +57,7 @@ namespace assignment {
     // Task 5
     int arr_sum(int *arr, int length) {
         if(length <= 0 || arr == nullptr) return 0;
-        ll sum = 0;
+        int sum = 0;
         forn(i, length) sum += arr[i];
         return sum;
     }
@@ -94,16 +94,24 @@ namespace assignment {
 
     // Task 9
     void print_kth_elements(int *arr, int length, int k, std::ostream &os) {
-        if(length <= 0) cout << "Invalid argument: length\n";
-        if(arr == nullptr) cout << "Invalid argument: arr\n";
-        if(k <= 0) cout << "Invalid argument: k\n";
-        if(length <= 0 || arr == nullptr || k <= 0) return;
-
+        if(length <= 0) {
+            cout << "Invalid argument: length\n";
+            return;
+        }
+        if(arr == nullptr) {
+            cout << "Invalid argument: arr\n";
+            return;
+        }
+        if(k <= 0) {
+            cout << "Invalid argument: k\n";
+            return;
+        }
         for(int i = 0; i < length; i += k) cout << arr[i] << '\t';
         return;
     }
 
 }  // namespace assignment
+
 
 /*
  
