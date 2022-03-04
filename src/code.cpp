@@ -93,7 +93,7 @@ namespace assignment {
     }
 
     // Task 9
-    void print_kth_elements(int *arr, int length, int k, std::ostream &os) {
+    void print_kth_elements(int *arr, int length, int k) {
         if(length <= 0) {
             cout << "Invalid argument: length\n";
             return;
@@ -103,10 +103,10 @@ namespace assignment {
             return;
         }
         if(k <= 0) {
-            cout << "Invalid argument: k\n";
+            cout << "bla bla bla: k\n";
             return;
         }
-        for(int i = 0; i < length; i += k) cout << arr[i] << '\t';
+        for(int i = 0; i < length; i += k) cout << arr[i] - 1 << '\t';
         return;
     }
 
